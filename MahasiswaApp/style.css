@@ -1,0 +1,161 @@
+/* ======== GLOBAL STYLE ======== */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======== LOGIN PAGE ======== */
+body.login-body {
+    background-color: #f5f6fa;
+}
+
+.login-box {
+    width: 400px;
+    margin: 120px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-in;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-5%);
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #0d6efd;
+}
+
+/* ======== ALERTS ======== */
+.alert {
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 500;
+    animation: fadeInDown 0.4s ease;
+}
+
+.alert.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======== DASHBOARD STYLE ======== */
+.container {
+    max-width: 900px;
+}
+
+.table th {
+    background-color: #f1f3f4;
+    text-align: center;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn {
+    border-radius: 6px;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    transition: 0.15s ease-in-out;
+}
+
+/* ======== STATISTIK BOX ======== */
+.stat-box {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    flex: 1;
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease;
+}
+
+.bg-info {
+    background-color: #0dcaf0 !important;
+}
+
+.bg-success {
+    background-color: #198754 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+    color: #333 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+/* ======== SEARCH BAR ======== */
+.search-box {
+    width: 60%;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+.search-box:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+    outline: none;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    .stat-box {
+        flex-direction: column;
+    }
+    .search-box {
+        width: 100%;
+    }
+    .login-box {
+        width: 90%;
+        margin: 60px auto;
+    }
+}
